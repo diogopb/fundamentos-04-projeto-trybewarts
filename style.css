@@ -1,23 +1,32 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Franklin Gothic Medium , Arial Narrow , Arial, sans-serif;
+  font-family: 'Gabarito', sans-serif;  color: white;
 }
 
 .header {
   display: flex;
   background-color: rgb(50, 167, 145);
-  padding: 5px;
+  padding: 0px;
   justify-content: space-between;
   height: 50px;
 }
 
+#trybewarts-header-title {
+  font-family: 'Gabarito', sans-serif;
+}
+
 .trybewarts-login {
   display: flex;
+  margin: 10px;
 }
 
 #trybewarts-header-title {
   color: white;
+}
+
+.color {
+  color: rgb(163, 163, 163);
 }
 
 .main {
@@ -25,13 +34,19 @@
 }
 
 #evaluation-form {
+  margin: 20px;
+  padding: 10px;
   display: flex;
   width: 675px;
   flex-direction: column;
+  border-radius: 1%;
+  background-color: rgb(50, 167, 145);
 }
 
 #trybewarts-forms-logo {
-  height: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around
 }
 
 .nome-completo , .email-casa {
@@ -43,4 +58,17 @@
   display: inline-block;
   padding: 4px;
   margin: 3px;
+}
+
+#gitnoria-house , #reactpuff-house , #corvinode-house , #pytherina-house {
+  color: black;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+.avaliation {
+  display:flex;
+  justify-content:space-between;
 }

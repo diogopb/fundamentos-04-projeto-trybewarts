@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto TrybeWarts</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,21 +19,39 @@
         <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="">
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form action="" class="trybewarts-login" id="login">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" id="password" placeholder="Senha">
-            <button type="submit">Entrar</button>
+            <div class="mb-3">
+                <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control form-control-sm" name="password" id="password"
+                    placeholder="Senha">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-light btn-sm">Entrar</button>
+            </div>
         </form>
     </header>
     <main class="main">
-        <form action="" id="evaluation-form">
+        <form action="" id="evaluation-form" class="w-50 mx-auto bg-info-subtle p-4 rounded">
+            <br>
             <div class="nome-completo">
-                <input type="text" id="input-name" placeholder="Nome">
-                <input type="text" id="input-lastname" placeholder="Sobrenome">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-name floatingInput" placeholder="Nome">
+                    <label class="color" for="floatingInput">Nome</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-lastname floatingInput" placeholder="Sobrenome">
+                    <label class="color" for="floatingInput">Sobrenome</label>
+                </div>
             </div>
 
             <div class="email-casa">
-                <input type="email" id="input-email" placeholder="Email">
-                <select name="" id="house">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="input-email floatingInput" placeholder="Email">
+                    <label class="color" for="floatingInput">Email</label>
+                </div>
+                <select name="" class="form-select form-select-sm mb-3" id="house" aria-label="Disabled select example">
+                    <option disabled>Escolha</option>
                     <option value="Gitnória" id="gitnoria-house">Gitnória</option>
                     <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
                     <option value="Corvinode" id="corvinode-house">Corvinode</option>
@@ -35,91 +59,136 @@
                 </select>
             </div>
 
-            <label for="" id="label-family">Qual sua família?</label>
+            <br>
+            
+            <label for="" id="label-family">
+                <h3>Qual sua família?</h3>
+            </label>
             <label for="label-family">
-                <div>
-                    <input type="radio" name="family" value="Frontend">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="family" value="Frontend">
                     <label for="Frontend">Frontend</label>
                 </div>
-                <div>
-                    <input type="radio" name="family" value="Backend">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="family" value="Backend">
                     <label for="Backend">Backend</label>
                 </div>
-                <div>
-                    <input type="radio" name="family" value="FullStack">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="family" value="FullStack">
                     <label for="FullStack">FullStack</label>
                 </div>
             </label>
 
-            <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+            <br>
+
+            <label for="" id="label-content">
+                <h3>Qual conteúdo você está com mais vontade de aprender?</h3>
+            </label>
             <label for="label-content">
-                <div>
-                    <input type="checkbox" class="subject" value="Comunicação" name="comunicacao">
+                <div class="form-check">
+                    <input type="checkbox" class="subject form-check-input" value="Comunicação" name="comunicacao">
                     <label for="comunicacao">Comunicação</label>
                 </div>
-                <div>
-                    <input type="checkbox" class="subject" value="Trabalho em equipe" name="trabalho-em-equipe">
+                <div class="form-check">
+                    <input type="checkbox" class="subject form-check-input" value="Trabalho em equipe"
+                        name="trabalho-em-equipe">
                     <label for="trabalho-em-equipe">Trabalho em equipe</label>
                 </div>
-                <div>
-                    <input type="checkbox" class="subject" value="Negociação" name="negociacao">
+                <div class="form-check">
+                    <input type="checkbox" class="subject form-check-input" value="Negociação" name="negociacao">
                     <label for="negociacao">Negociação</label>
                 </div>
-                <div>
-                    <input type="checkbox" class="subject" value="Escuta ativa" name="escuta-ativa">
+                <div class="form-check">
+                    <input type="checkbox" class="subject form-check-input" value="Escuta ativa" name="escuta-ativa">
                     <label for="escuta-ativa">Escuta ativa</label>
                 </div>
-                <div>
-                    <input type="checkbox" class="subject" value="Métodos de array" name="metodos-de-array">
+                <div class="form-check">
+                    <input type="checkbox" class="subject form-check-input" value="Métodos de array"
+                        name="metodos-de-array">
                     <label for="metodos-de-array">Métodos de array</label>
                 </div>
-                <div>
-                    <input type="checkbox" class="subject" value="Jest" name="jest">
+                <div class="form-check">
+                    <input type="checkbox" class="subject form-check-input" value="Jest" name="jest">
                     <label for="jest">Jest</label>
                 </div>
             </label>
 
-            <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
+            <br>
+
+            <label for="" id="label-rate">
+                <h3>Como você avalia a Trybewarts?</h3>
+            </label>
             <label for="label-rate">
-                <div>
-                    <input type="radio" name="rate" id="" value="1">
-                    <label for="1">1</label>
-                    <input type="radio" name="rate" id="" value="2">
-                    <label for="2">2</label>
-                    <input type="radio" name="rate" id="" value="3">
-                    <label for="3">3</label>
-                    <input type="radio" name="rate" id="" value="4">
-                    <label for="4">4</label>
-                    <input type="radio" name="rate" id="" value="5">
-                    <label for="5">5</label>
-                    <input type="radio" name="rate" id="" value="6">
-                    <label for="6">6</label>
-                    <input type="radio" name="rate" id="" value="7">
-                    <label for="7">7</label>
-                    <input type="radio" name="rate" id="" value="8">
-                    <label for="8">8</label>
-                    <input type="radio" name="rate" id="" value="9">
-                    <label for="9">9</label>
-                    <input type="radio" name="rate" id="" value="10">
-                    <label for="10">10</label>
+                <div class="avaliation">
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="1">
+                        <label class="form-check-label" for="1">1</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="2">
+                        <label class="form-check-label" for="2">2</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="3">
+                        <label class="form-check-label" for="3">3</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="4">
+                        <label class="form-check-label" for="4">4</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="5">
+                        <label class="form-check-label" for="5">5</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="6">
+                        <label class="form-check-label" for="6">6</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="7">
+                        <label class="form-check-label" for="7">7</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="8">
+                        <label class="form-check-label" for="8">8</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="9">
+                        <label class="form-check-label" for="9">9</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="rate" id="" value="10">
+                        <label class="form-check-label" for="10">10</label>
+                    </div>
                 </div>
             </label>
 
-            <label for="" class="textarea">Descreva os principais pontos de aprendizado até aqui (1 hard skill / 1 soft skill):</label>
-            <textarea name="" id="" cols="30" rows="10" maxlength="500" minlength="20" placeholder="Resposta:">Aqui você responderá a pergunta acima em um texto de 20 a 500 caracteres.</textarea>
+            <br>
 
-            <div>
-                <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
-                <input type="checkbox" id="agreement">
+            <label for="" class="textarea">
+                <h4>Descreva os principais pontos de aprendizado até aqui (1 hard skill / 1 soft
+                    skill):</h4>
+            </label>
+            <div class="form-floating">
+            <textarea name="" class="form-control" id="" cols="30" rows="10" maxlength="500" minlength="20"
+                placeholder="Resposta:">Aqui você responderá a pergunta acima em um texto de 20 a 500 caracteres.</textarea>
             </div>
-            
-            <button type="submit" id="submit-btn" disabled>Enviar</button>
+
+                <br>
+
+            <div class="form-check">
+                <label class="form-check-label" for="agreement"  id="label-infos">Você concorda com o uso das informações acima?</label>
+                <input class="form-check-input" type="checkbox" id="agreement">
+            </div>
+            <br>
+
+            <button type="submit" id="submit-btn" class="btn btn-light" disabled>Enviar</button>
         </form>
         <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="">
     </main>
 
     <footer>Direitos reservados à Trybewarts©</footer>
-    
+
     <script src="script.js"></script>
 </body>
 
